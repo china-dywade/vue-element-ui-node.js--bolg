@@ -8,7 +8,20 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
+<<<<<<< HEAD
 
+=======
+const createLintingRule = () => ({
+  test: /\.(js|vue)$/,
+  loader: 'eslint-loader',
+  enforce: 'pre',
+  include: [resolve('src'), resolve('test')],
+  options: {
+    formatter: require('eslint-friendly-formatter'),
+    emitWarning: !config.dev.showEslintErrorsInOverlay
+  }
+})
+>>>>>>> 946b0414f8c62bd92dee18a5ee510b387cb91c3e
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
@@ -27,11 +40,18 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+<<<<<<< HEAD
       'static': path.resolve(__dirname, '../static'),
+=======
+>>>>>>> 946b0414f8c62bd92dee18a5ee510b387cb91c3e
     }
   },
   module: {
     rules: [
+<<<<<<< HEAD
+=======
+      ...(config.dev.useEslint ? [createLintingRule()] : []),
+>>>>>>> 946b0414f8c62bd92dee18a5ee510b387cb91c3e
       {
         test: /\.vue$/,
         loader: 'vue-loader',
@@ -40,7 +60,11 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
+<<<<<<< HEAD
         include: [resolve('src'), resolve('test')]
+=======
+        include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
+>>>>>>> 946b0414f8c62bd92dee18a5ee510b387cb91c3e
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -59,6 +83,16 @@ module.exports = {
         }
       },
       {
+<<<<<<< HEAD
+=======
+
+        test: /\.less$/,
+
+        loader: "style-loader!css-loader!less-loader",
+
+      },
+      {
+>>>>>>> 946b0414f8c62bd92dee18a5ee510b387cb91c3e
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
         loader: 'url-loader',
         options: {

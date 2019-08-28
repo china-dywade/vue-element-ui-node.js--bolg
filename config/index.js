@@ -1,9 +1,5 @@
 'use strict'
-<<<<<<< HEAD
 // Template version: 1.2.7
-=======
-// Template version: 1.3.1
->>>>>>> 946b0414f8c62bd92dee18a5ee510b387cb91c3e
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
@@ -14,7 +10,6 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-<<<<<<< HEAD
     proxyTable: {
       '/api':{
           target:'http://jsonplaceholder.typicode.com',
@@ -43,52 +38,24 @@ module.exports = {
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
 
     
-=======
-    proxyTable: {},
-
-    // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8888, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
-    autoOpenBrowser: true,
-    errorOverlay: true,
-    notifyOnErrors: true,
-    poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
-
-    // Use Eslint Loader?
-    // If true, your code will be linted during bundling and
-    // linting errors and warnings will be shown in the console.
-    useEslint: false,
-    // If true, eslint errors and warnings will also be shown in the error overlay
-    // in the browser.
-    showEslintErrorsInOverlay: false,
-
->>>>>>> 946b0414f8c62bd92dee18a5ee510b387cb91c3e
     /**
      * Source Maps
      */
 
     // https://webpack.js.org/configuration/devtool/#development
-<<<<<<< HEAD
     devtool: 'eval-source-map',
-=======
-    devtool: 'cheap-module-eval-source-map',
->>>>>>> 946b0414f8c62bd92dee18a5ee510b387cb91c3e
 
     // If you have problems debugging vue-files in devtools,
     // set this to false - it *may* help
     // https://vue-loader.vuejs.org/en/options.html#cachebusting
     cacheBusting: true,
 
-<<<<<<< HEAD
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)
     // In our experience, they generally work as expected,
     // just be aware of this issue when enabling this option.
     cssSourceMap: false,
-=======
-    cssSourceMap: true
->>>>>>> 946b0414f8c62bd92dee18a5ee510b387cb91c3e
   },
 
   build: {
@@ -98,26 +65,16 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-<<<<<<< HEAD
     assetsPublicPath: './',
-=======
-    assetsPublicPath: '/',
->>>>>>> 946b0414f8c62bd92dee18a5ee510b387cb91c3e
 
     /**
      * Source Maps
      */
 
-<<<<<<< HEAD
     productionSourceMap: false,
     // https://webpack.js.org/configuration/devtool/#production
     devtool: '#source-map',
   
-=======
-    productionSourceMap: true,
-    // https://webpack.js.org/configuration/devtool/#production
-    devtool: '#source-map',
->>>>>>> 946b0414f8c62bd92dee18a5ee510b387cb91c3e
 
     // Gzip off by default as many popular static hosts such as
     // Surge or Netlify already gzip all static assets for you.

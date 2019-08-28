@@ -3,13 +3,7 @@ const utils = require('./utils')
 const webpack = require('webpack')
 const config = require('../config')
 const merge = require('webpack-merge')
-<<<<<<< HEAD
 const baseWebpackConfig = require('./webpack.base.conf')
-=======
-const path = require('path')
-const baseWebpackConfig = require('./webpack.base.conf')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
->>>>>>> 946b0414f8c62bd92dee18a5ee510b387cb91c3e
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
@@ -27,18 +21,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   // these devServer options should be customized in /config/index.js
   devServer: {
     clientLogLevel: 'warning',
-<<<<<<< HEAD
     historyApiFallback: true,
     hot: true,
-=======
-    historyApiFallback: {
-      rewrites: [
-        { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') },
-      ],
-    },
-    hot: true,
-    contentBase: false, // since we use CopyWebpackPlugin.
->>>>>>> 946b0414f8c62bd92dee18a5ee510b387cb91c3e
     compress: true,
     host: HOST || config.dev.host,
     port: PORT || config.dev.port,
@@ -66,17 +50,6 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       template: 'index.html',
       inject: true
     }),
-<<<<<<< HEAD
-=======
-    // copy custom static assets
-    new CopyWebpackPlugin([
-      {
-        from: path.resolve(__dirname, '../static'),
-        to: config.dev.assetsSubDirectory,
-        ignore: ['.*']
-      }
-    ])
->>>>>>> 946b0414f8c62bd92dee18a5ee510b387cb91c3e
   ]
 })
 
